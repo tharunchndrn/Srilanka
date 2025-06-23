@@ -1,0 +1,110 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Serendib Travels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="company-branding">
+      <h1 class="company-name">SERENDIB<span class="travels">Travels</span></h1>
+    </div>
+    <nav class="navbar">
+      <a href="Home.html">Home</a>
+      <a href="Aboutus.html">About Us</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Packages.html">Packages</a>
+      <a href="Destination.html">Destinations</a>
+      <a href="Enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <div class="overlay">
+    <section class="C1">
+      <div class="C1-content">
+        <h2>Travel Enquiry</h2>
+        <h3>Let's Plan Your Sri Lankan Adventure</h3>
+        <p>Fill out the form below and our travel experts will contact you within 24 hours.</p>
+      </div>
+    </section>
+
+    <section class="enquiry-form">
+      <div class="container">
+        <form id="travelEnquiryForm" onsubmit="return submitEnquiry()">
+          <div class="form-group">
+            <label for="name">Full Name*</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Contact Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country*</label>
+            <input type="text" id="country" name="country" required>
+          </div>
+
+          <div class="form-group">
+            <label for="package">Preferred Package</label>
+            <select id="package" name="package">
+              <option value="">Select a package</option>
+              <option value="Classic Sri Lanka">Classic Sri Lanka</option>
+              <option value="Beach Paradise">Beach Paradise</option>
+              <option value="Wildlife Adventure">Wildlife Adventure</option>
+              <option value="Luxury Escape">Luxury Escape</option>
+              <option value="Family Fun">Family Fun</option>
+              <option value="Buddhist Pilgrimage">Buddhist Pilgrimage</option>
+              <option value="custom">Custom Package (describe below)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="arrival">Expected Arrival Date</label>
+            <input type="date" id="arrival" name="arrival">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Special Requests</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Submit Enquiry</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Serendib Travels | Travel Agency License No: SLTDA/TA/1234</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitEnquiry() {
+      // Simple form validation
+      const form = document.getElementById('travelEnquiryForm');
+      if (form.checkValidity()) {
+        // Show success message
+        alert("Submission successful! Our team will contact you soon.");
+        return true; // Allows form submission
+      }
+      return false; // Prevents form submission if validation fails
+    }
+  </script>
+</body>
+</html>
